@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #121212;
+    font-family: Roboto;
+}
+
+h3 {
+    color: orange;
+}
+h1{
+    color:white
+}
+
+.navbar{
+    overflow: hidden;
+    background-color: #151f30;
+    
+    margin-left: 65px;
+    margin-right: 67px;
+    max-width: 95%;
+    
+}
+
+.navbar a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-right: solid;
+    border-width: 0.5px;
+    height: 100%;
+    fill: 100%;
+}
+
+.navbar a:hover {
+    background-color: #1f1f1f;
+}
+
+.navbar .searchBar{
+    float: right;
+    padding: 5px;
+}
+
+form{
+    background-color: #121212;
+    width: 300px;
+    height: 40px;
+    display: flex;
+    align-items: stretch;
+}
+
+input{
+    all: unset;
+    font: 15px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 0px 10px;
+
+}
+
+.thumbnail{
+    height: 280px;
+    width: 200px;
+    
+}
+
+.row{
+    margin-left: 55px;
+}
+
+.column{
+    float:left;
+    width: 32%;
+    padding: 10px 10px;
+}
+
+.card {
+    border: solid;
+    border-color: lightgray;
+    border-width: 0.5px;
+    padding: 15px;
+    background-color: #1f1f1f;
+    position: relative;
+    height:398px;
+}
+
+.card h3{
+    text-align: center;
+}
+
+.description{
+    color: white;
+    max-width: 180px;
+    float: right;
+    padding: 0px 10px;
+    text-align: left;
+    border: solid;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border: none;
+    height: 240px;
+}
+.description:hover{
+    overflow-y: auto;
+}
+
+.movie_title{
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+.rating{
+    position:absolute;
+    width:170px;
+    height:28px;
+    float:left;
+    background-color: #333333;
+    bottom:15px; /* Adjust top position as needed */
+    right: 20px; /* Adjust right position as needed */
+    text-align: left;
+    padding-left: 15px;
+    color:#959595;
+}
+
+.star{
+    font-size:18px;
+    padding: 5px;
+    color:orange;
+}
+
+.toReviews{
+    float: right;
+    height: 100%;
+    padding: 0px 10px;
+    fill: 100%;
+    background-color: orange;
+    border: none;
+    color: black;
+}
+
+.toReviews:hover{
+    background-color: darkgoldenrod;
+    color: #1f1f1f;
+    cursor: pointer;
+}
+

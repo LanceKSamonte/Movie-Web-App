@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #121212;
+    font-family: Roboto;
+}
+
+.title{
+    border: none;   
+    padding: 10px;
+    padding-left: 30px;
+    margin-left: 65px;
+    margin-right: 67px;
+    max-width: 95%;
+    color: orange;
+    background-color: #1f1f1f;
+}
+
+.navbar{
+    overflow: hidden;
+    background-color: #151f30;
+    
+    margin-left: 65px;
+    margin-right: 67px;
+    max-width: 95%;
+    
+}
+
+.navbar a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-right: solid;
+    border-width: 0.5px;
+    height: 100%;
+    fill: 100%;
+}
+
+.navbar a:hover {
+    background-color: #1f1f1f;
+}
+
+.thumbnail{
+    height: 450px;
+    width: 300px;
+    
+}
+
+.star{
+    color:orange;
+}
+
+.image{
+    border: none;
+    float: left;
+    margin-left: 65px;
+    height: 525px;
+    text-align: center;
+    color: #959595;
+    font-size: 30px;
+    background-color: #1f1f1f;
+}
+
+.review{
+    font-family: Roboto;
+    margin-right: 67px;
+    color: white;
+    margin-left:400px;
+    max-height: 250px;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.review p{
+    color: lightblue;
+}
+.review:hover{
+    overflow-y:auto;
+}
+
+.writeReview{
+    background-color: orange;
+    color: black;
+    border: none;
+    height: 30px;
+    font-family: Roboto;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+.writeReview:hover{
+    background-color: darkgoldenrod;
+    color: #1f1f1f;
+    cursor: pointer;
+}
+
+.review{
+    display: hidden;
+}
+
+.writeNewReview{
+    display: none;
+    font-family: Roboto;
+    margin-right: 67px;
+    color: white;
+    margin-left:400px;
+    height: 270px;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.writeNewReview p{
+    color: lightblue;
+}
+
+#new_user{
+    background-color: #1f1f1f;
+    color: white;
+    border: solid;
+    border-width: 0.1px;
+}
+
+#new_review{
+    background-color: #1f1f1f;
+    height: 100px;
+    width: 800px;
+    color: white;
+    overflow-x: hidden;
+    white-space: pre-wrap; 
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: Roboto;
+}
+.saveReview{
+    background-color: orange;
+    color: black;
+    border: none;
+}
