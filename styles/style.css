@@ -78,7 +78,7 @@ input{
 
 .column{
     float:left;
-    width: 32%;
+    width: 450px;
     padding: 10px 10px;
 }
 
@@ -123,8 +123,8 @@ input{
     height:28px;
     float:left;
     background-color: #333333;
-    bottom:15px; /* Adjust top position as needed */
-    right: 20px; /* Adjust right position as needed */
+    bottom:15px; 
+    right: 20px; 
     text-align: left;
     padding-left: 15px;
     color:#959595;
