@@ -18,18 +18,15 @@ function returnInfo(url){
     .then(function(data){
       console.log(data);
       const {poster_path, vote_average} = data;
-      const image_path = poster_path; // Initialize img_path
-      console.log(image_path);
       const div_new = document.createElement('div');
       div_new.innerHTML = `
         <div class="image">
-            <img src="${img_path+image_path}" class="thumbnail"></img>
+            <img src="${poster_path ? img_path+poster_path : "../images/imgNotFound.jpg"}" class="thumbnail"></img>
             <br>
             <span class="star">☆</span> ${parseFloat(vote_average).toFixed(1)}
             <button class="writeReview" id="writeReview">Write a review</button>
         </div>
-          
-
+        
         <div class="writeNewReview" id="writeNewReview">
           <hr>  
           <p><strong>Write a review</strong></p>
