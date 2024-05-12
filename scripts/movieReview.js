@@ -62,16 +62,18 @@ function returnReviews(url){
   });
 }
 
+
+// event listener to show the create a review tab
 main.addEventListener('click', (event) => {
   const newReviewDiv = document.getElementById('writeNewReview');
-  // Check if the clicked element matches the button you're interested in
+  // Check if the clicked element matches the button id
   if (event.target.matches('#writeReview')) {
-      // Hide the new review div
-      if(newReviewDiv.style.display == 'none'){
-        newReviewDiv.style.display = 'block';
-      }else{
-        newReviewDiv.style.display = 'none';
-      }
+    // Toggle the display of the new review div
+    if (newReviewDiv.style.display == 'none' || newReviewDiv.style.display == '') {
+      newReviewDiv.style.display = 'block';
+    } else {
+      newReviewDiv.style.display = 'none';
+    }
   }
 });
 
