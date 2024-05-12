@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyMovieList</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../images/favicon.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="active" id="popular" href="index.html">Popular</a>
+        <a class="active" id="trending" href="trending.html">Trending</a>
+        <a class="active" id="topMovies" href="topMovies.html">Top Movies</a>
+        <a class="active" id="upcoming" href="upcoming.html">Upcoming Movies</a>
+        <div class="searchBar">
+            <form role="search" id="form">
+                <input type="search" id="query" name="q" placeholder="Search Movies...">
+            </form>
+        </div>
+    </div>
+
+    <div style="padding-left:16px"></div>
+    
+    <section id="section">
+        <!--<div class="row">
+                    <div class="column">
+                        <div class="card">
+                            <div class="movie_title"><h3>${title}</h3></div>
+                            <hr>
+                            <img src="${IMG_PATH+poster_path}" 
+                                class="thumbnail" alt="${title}">
+                            <div class="description">
+                                <p>${overview}</p>
+                            </div>
+                            <span class="rating"><button class="toList">add to list</button><span class="star">☆</span>${parseFloat(vote_average).toFixed(1)}
+                            </span> 
+                            
+                        </div>
+                    </div>
+                </div>    -->
+    </section>
+    
+</body>
+<script src="../scripts/movies.js"></script>
+<!-- Call returnMovies() from movies.js-->
+<script>
+    returnMovies('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=8e9c780609a52e87297348610561d18a&page=1');
+</script>
+</html>
