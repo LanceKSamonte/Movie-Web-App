@@ -12,53 +12,11 @@ function returnMovies(url){
     console.log(data.results);
     main.innerHTML = '';
     data.results.forEach(element => {
-        const{title, poster_path, vote_average, overview} = element;
+        const{id, title, poster_path, vote_average, overview} = element;
         const movieEl = document.createElement('div');
         
-        // check if there is no image
-        if(poster_path == null){
-            movieEl.classList.add('movie');
-            movieEl.innerHTML =`
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <div class="movie_title"><h3>${title}</h3></div>
-                            <hr>
-                            <img src="../images/imgNotFound.jpg" 
-                                class="thumbnail" alt="${title}">
-                            <div class="description">
-                                <p>${overview}</p>
-                            </div>
-                            <span class="rating"><a href="movie.html?id=${element.id}&title=${element.title}"><button class="toReviews">Reviews</button></a><span class="star">☆</span>${parseFloat(vote_average).toFixed(1)}
-                            </span> 
-                            
-                        </div>
-                    </div>
-                </div>    
-            `       
-        }
-        else{
-            movieEl.classList.add('movie');
-            movieEl.innerHTML =`
-                <div class="row"> 
-                    <div class="column">
-                        <div class="card">
-                            <div class="movie_title"><h3>${title}</h3></div>
-                            <hr>
-                            <img src="${IMG_PATH+poster_path}" 
-                                class="thumbnail" alt="${title}">
-                            <div class="description">
-                                <p>${overview}</p>
-                            </div>
-                            <span class="rating"><a href="movie.html?id=${element.id}&title=${element.title}"><button class="toReviews">Reviews</button></a><span class="star">☆</span>${parseFloat(vote_average).toFixed(1)}
-                            </span> 
-                            
-                        </div>
-                    </div>
-                </div>    
-            `       
-        }
-       
+        movieEl.innerHTML = makeCard(title, overview, id, poster_path, vote_average);
+   
         main.appendChild(movieEl);
     });
   });
@@ -75,3 +33,25 @@ form.addEventListener("submit", (e) =>{
         search.value = "";
     }
 });
+
+// function to make a movie card
+function makeCard(title, overview, id, poster_path, vote_average){
+    return `
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <div class="movie_title"><h3>${title}</h3></div>
+                    <hr>
+                    <img src="${poster_path ? IMG_PATH + poster_path : '../images/imgNotFound.jpg'}" 
+                        class="thumbnail" alt="${title}">   
+                    <div class="description">
+                        <p>${overview}</p>
+                    </div>
+                    <span class="rating"><a href="movie.html?id=${id}&title=${title}"><button class="toReviews">Reviews</button></a><span class="star">☆</span>${parseFloat(vote_average).toFixed(1)}
+                    </span> 
+                    
+                </div>
+            </div>
+        </div>
+    `; 
+}
